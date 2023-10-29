@@ -1,0 +1,33 @@
+{
+    "name": "PHP 8.0 Lumen 8.3",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "web",
+    "runServices": ["web", "mysql"],
+    "workspaceFolder": "/var/www/html",
+    "capAdd": ["SYS_PTRACE"],
+    "securityOpt": ["seccomp=unconfined"],
+    "remoteUser": "vscode",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "akamud.vscode-theme-onedark",
+                "cjhowe7.laravel-blade",
+                "esbenp.prettier-vscode",
+                "github.copilot",
+                "vscode-icons-team.vscode-icons",
+                "xdebug.php-debug",
+                "xdebug.php-pack",
+                "zobo.php-intellisense"
+            ],
+            "settings": {
+                "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+                "[php]": {
+                    "editor.tabSize": 4,
+                    "editor.defaultFormatter": "zobo.php-intellisense"
+                },
+                "workbench.colorTheme": "Atom One Dark"
+            }
+        }
+    }
+}
